@@ -54,7 +54,6 @@ app.post('/api/products',upload.single('image'), (req, res) => {
     );
 });
 
-
 app.delete('/api/products/:id', (req, res) => {
     let sql = 'UPDATE PRODUCT SET isDeleted = 1 WHERE id = ?';
     let params = [req.params.id];
